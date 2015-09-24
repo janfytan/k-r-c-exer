@@ -1,0 +1,10 @@
+/* bitcount: count 1 bits in x */
+int bitcount2(unsigned x)
+{
+int b;
+for (b = 0; x != 0; x &= (x - 1))
+b++;
+return b;
+}
+
+00001101  00001100  -> 00001100 00001011 ->00001000 00000111->00000000
